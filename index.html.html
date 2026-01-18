@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kape-ling Ka</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --olive:#5b6146;
+  --olive-dark:#4f5540;
+  --cream:#fbf8f4;
+  --beige:#e6d9c7;
+  --text:#2f2f2f;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+/* NAV */
+nav{
+  background:var(--olive);
+  padding:26px 84px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+}
+
+nav h1{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  font-weight:600;
+  letter-spacing:.3px;
+}
+
+nav a{
+  margin-left:32px;
+  font-size:13px;
+  opacity:.85;
+}
+
+.btn{
+  background:var(--beige);
+  padding:11px 26px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:500;
+  color:#4b473a;
+}
+
+/* HERO */
+.hero{
+  background:var(--olive);
+  padding:96px 84px 110px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:84px;
+  color:#fff;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  right:90px;
+  bottom:40px;
+  width:120px;
+  height:120px;
+  background:
+    radial-gradient(#fff 1.5px, transparent 1.5px);
+  background-size:14px 14px;
+  opacity:.4;
+}
+
+.hero h2{
+  font-family:'Playfair Display',serif;
+  font-size:66px;
+  font-weight:600;
+  line-height:1.05;
+  margin-bottom:26px;
+}
+
+.hero p{
+  max-width:470px;
+  font-size:14.5px;
+  line-height:1.7;
+  opacity:.9;
+  margin-bottom:38px;
+}
+
+.hero img{
+  width:100%;
+  border-radius:28px;
+  object-fit:cover;
+}
+
+/* FEATURES */
+.features{
+  padding:86px 84px 90px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:52px;
+  text-align:center;
+}
+
+.feature{
+  position:relative;
+}
+
+.feature::after{
+  content:"~";
+  position:absolute;
+  top:-12px;
+  right:40%;
+  font-size:24px;
+  opacity:.15;
+}
+
+.feature h3{
+  margin-top:14px;
+  font-size:14.5px;
+  font-weight:500;
+}
+
+.feature p{
+  font-size:13px;
+  opacity:.6;
+  margin-top:6px;
+}
+
+/* MENU */
+.menu{
+  padding:0 84px 96px;
+}
+
+.menu h2{
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  font-weight:600;
+  margin-bottom:46px;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:34px;
+}
+
+.card{
+  position:relative;
+  border-radius:26px;
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+}
+
+.card span{
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  font-weight:600;
+  color:#fff;
+}
+
+/* ABOUT */
+.about{
+  background:var(--olive-dark);
+  padding:100px 84px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:86px;
+  color:#fff;
+  position:relative;
+}
+
+.about::before{
+  content:"";
+  position:absolute;
+  left:60px;
+  top:60px;
+  width:90px;
+  height:90px;
+  border:1.5px dashed rgba(255,255,255,.35);
+  border-radius:50%;
+}
+
+.about img{
+  width:100%;
+  border-radius:28px;
+  object-fit:cover;
+}
+
+.about h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:600;
+  margin-bottom:24px;
+}
+
+.about p{
+  font-size:14.5px;
+  line-height:1.7;
+  opacity:.9;
+  margin-bottom:24px;
+}
+
+.about li{
+  list-style:none;
+  font-size:14px;
+  margin-bottom:10px;
+  opacity:.9;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:34px;
+  font-size:12.5px;
+  opacity:.55;
+}
+
+@media(max-width:900px){
+  .hero,.about{grid-template-columns:1fr;}
+  .features,.menu-grid{grid-template-columns:1fr;}
+  .hero h2{font-size:50px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>☕ Kape-ling Ka</h1>
+  <div>
+    <a>Home</a>
+    <a>Menu</a>
+    <a>Contact</a>
+    <a class="btn">Order online</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h2>Fresh Coffee &<br>Company, Every Day</h2>
+    <p>
+      Because coffee is better with company.  
+      A cozy neighborhood café for slow mornings, shared stories,
+      and warm cups that linger.
+    </p>
+    <a class="btn">Order online</a>
+  </div>
+
+  <!-- TOP-DOWN CAFE TABLE -->
+  <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772">
+</section>
+
+<section class="features">
+  <div class="feature">☕<h3>Specialty Coffee</h3><p>100% Arabica beans</p></div>
+  <div class="feature">🥐<h3>Morning Bakery</h3><p>Baked in-house daily</p></div>
+  <div class="feature">🍳<h3>All-day Breakfast</h3><p>Classics until close</p></div>
+  <div class="feature">📍<h3>Fast Pickup</h3><p>Ready in minutes</p></div>
+</section>
+
+<section class="menu">
+  <h2>Menu Highlights</h2>
+
+  <div class="menu-grid">
+    <!-- ESPRESSO MACHINE -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc">
+      <span>Espresso Creations</span>
+    </div>
+
+    <!-- CUPCAKES TRAY -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f">
+      <span>Signature Cupcakes</span>
+    </div>
+
+    <!-- BRUNCH TOAST -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8">
+      <span>Brunch Toasts</span>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <!-- COZY CAFE INTERIOR -->
+  <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8">
+
+  <div>
+    <h2>About Our Café</h2>
+    <p>
+      We’re a local café built around connection —
+      where espresso meets conversation and every seat
+      feels like it’s waiting for you.
+    </p>
+    <ul>
+      <li>• In-house bakery & seasonal pastries</li>
+      <li>• Carefully dialed espresso shots</li>
+      <li>• Calm, cozy, slow-living atmosphere</li>
+    </ul>
+    <br>
+    <a class="btn">Order online</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Kape-ling Ka — Because coffee is better with company ☕
+</footer>
+
+</body>
+</html>
